@@ -1,7 +1,7 @@
 import { Text, StyleSheet } from "react-native";
 import { colors } from "../../config/theme";
 
-const StyledText = ({ children, style, small, big, bold, ...props }) => {
+const StyledText = ({ children, style, small, normal, size, bold, ...props }) => {
 	let activeColors = colors;
 
 	return (
@@ -9,8 +9,8 @@ const StyledText = ({ children, style, small, big, bold, ...props }) => {
 			style={[
 				{
 					color: activeColors.tint,
-					fontSize: small ? 14 : big ? 24 : 16,
-					fontWeight: bold || big ? "bold" : "normal",
+					fontSize: size,
+					fontWeight: bold || normal ? "bold" : "normal",
 				},
 				style,
 			]}
