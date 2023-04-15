@@ -14,11 +14,11 @@ export default function Home() {
 	return (
 		<MainContainer>
 			{/* <AppHeader> */}
-			<StyledText style={styles.sectionTitle} big>
+			<StyledText style={styles.sectionTitle} size={24}>
 				Thịnh Hành
 			</StyledText>
 			<NewsSection data={dataNewFeeds} />
-			<StyledText style={styles.sectionTitle} big>
+			<StyledText style={styles.sectionTitle} size={24}>
 				Khác
 			</StyledText>
 			<ExploreSection data={dataExplore} />

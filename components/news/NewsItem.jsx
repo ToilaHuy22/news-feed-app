@@ -31,7 +31,7 @@ const NewsItem = ({ image, avatar, author, title, date, ...props }) => {
 					</View>
 					<StyledText
 						style={[styles.date, { color: activeColors.tertiary }]}
-						small
+						size={14}
 					>
 						{date}
 					</StyledText>
