@@ -1,42 +1,18 @@
 import { StyleSheet, TouchableOpacity, Image, View } from "react-native";
 import { colors } from "../../config/theme";
-import { StatusBar } from "expo-status-bar";
-
 import StyledText from "../texts/StyledText";
 
-const ExploreItems = ({ image, avatar, author, title, date, ...props }) => {
-	let activeColors = colors;
-
+const ExploreItems = ({ image, title, ...props }) => {
 	return (
 		<TouchableOpacity
-			style={[{ backgroundColor: activeColors.second }, styles.container]}
+			onPress={() => alert(title)}
+			style={[styles.container]}
 			{...props}
 		>
-			<Image source={image} style={styles.image} />
-			<View style={styles.bottomSection}>
-				<StyledText
-					numberOfLines={3}
-					style={[{ color: activeColors.accent }, styles.title]}
-					bold
-				>
-					{title}
-				</StyledText>
-
-				<View style={styles.authorMain}>
-					<View style={styles.author}>
-						<Image source={avatar} style={styles.avatar} />
-						<StyledText numberOfLines={2} bold>
-							{author}
-						</StyledText>
-					</View>
-					<StyledText
-						style={[styles.date, { color: activeColors.tertiary }]}
-						small
-					>
-						{date}
-					</StyledText>
-				</View>
-			</View>
+			<Image source={image} style={[styles.image, StyleSheet.absoluteFill]} />
+			<StyledText style={styles.title} bold>
+				{title}
+			</StyledText>
 		</TouchableOpacity>
 	);
 };
@@ -54,10 +30,16 @@ const styles = StyleSheet.create({
 		borderRadius: 25,
 	},
 	title: {
+		borderRadius: 25,
 		fontSize: 19,
-	},
-	date: {
-		flex: 2,
+		color: colors.primary,
+		height: "100%",
+		width: "100%",
+		textAlign: "center",
+		textAlignVertical: "center",
+		backgroundColor: "#0003",
+		// borderWidth: 4,
+		borderColor: colors.accent,
 	},
 });
 
