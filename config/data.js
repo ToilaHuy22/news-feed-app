@@ -38,8 +38,23 @@ export const dataExplore = [
 		image: require("./../assets/images/exploreImage/sonyA73.jpg"),
 	},
 	{
-		id: 1,
+		id: 2,
 		title: "SmartPhone",
 		image: require("./../assets/images/exploreImage/iphone14ProMax.jpg"),
+	},
+	{
+		id: 3,
+		title: "Computer",
+		image: require("./../assets/images/exploreImage/computer.jpg"),
+	},
+	{
+		id: 4,
+		title: "Mouse",
+		image: require("./../assets/images/exploreImage/mouse.jpg"),
+	},
+	{
+		id: 5,
+		title: "Head Phone",
+		image: require("./../assets/images/exploreImage/headPhone.jpg"),
 	},
 ];
